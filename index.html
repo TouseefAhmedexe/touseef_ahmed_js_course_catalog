@@ -27,6 +27,52 @@
 
             <p class="notice" id="data-notice" hidden></p>
         </section>
+
+        <section class="section" id="controls">
+            <h2>Find a Course</h2>
+
+            <form class="filters" id="filter-form">
+                <div class="field">
+                    <label for="search-input">Search courses</label>
+                    <input type="search" id="search-input" name="q" placeholder="Example: async" autocomplete="off">
+                </div>
+
+                <div class="field">
+                    <label for="category-select">Category</label>
+                    <select id="category-select" name="category">
+                        <option value="all">All categories</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="level-select">Level</label>
+                    <select id="level-select" name="level">
+                        <option value="all">All levels</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="sort-select">Sort by</label>
+                    <select id="sort-select" name="sort">
+                        <option value="title">Title (A to Z)</option>
+                        <option value="date">Start date (soonest first)</option>
+                        <option value="duration-short">Duration (shortest first)</option>
+                        <option value="duration-long">Duration (longest first)</option>
+                        <option value="rating">Rating (highest first)</option>
+                    </select>
+                </div>
+
+                <div class="button-row">
+                    <button class="button button--secondary" type="button" id="clear-filters">Clear filters</button>
+                    <button class="button" type="button" id="reload-button">Reload data</button>
+                </div>
+            </form>
+
+            <p class="hint">Your search, category, level and sort choices are saved in the address of the page.</p>
+        </section>
     </main>
 </body>
 
