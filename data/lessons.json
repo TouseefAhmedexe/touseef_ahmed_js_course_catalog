@@ -1,0 +1,19 @@
+[
+    { "id": "html-basics-1", "courseId": "html-basics", "title": "Document structure and headings", "minutes": 45, "order": 1 },
+    { "id": "html-basics-2", "courseId": "html-basics", "title": "Links, images and lists", "minutes": 50, "order": 2 },
+    { "id": "html-tables-forms-1", "courseId": "html-tables-forms", "title": "Tables and table sections", "minutes": 40, "order": 1 },
+    { "id": "html-tables-forms-2", "courseId": "html-tables-forms", "title": "Form groups and input types", "minutes": 55, "order": 2 },
+    { "id": "html-media-sections-1", "courseId": "html-media-sections", "title": "Semantic page sections", "minutes": 40, "order": 1 },
+    { "id": "html-media-sections-2", "courseId": "html-media-sections", "title": "Audio, video and embedded content", "minutes": 50, "order": 2 },
+    { "id": "css-basics-1", "courseId": "css-basics", "title": "Selectors and the cascade", "minutes": 50, "order": 1 },
+    { "id": "css-basics-2", "courseId": "css-basics", "title": "Colors, text and backgrounds", "minutes": 45, "order": 2 },
+    { "id": "css-box-model-1", "courseId": "css-box-model", "title": "The box model", "minutes": 45, "order": 1 },
+    { "id": "css-box-model-2", "courseId": "css-box-model", "title": "Positioning and floats", "minutes": 55, "order": 2 },
+    { "id": "css-responsive-1", "courseId": "css-responsive", "title": "Flexbox and Grid", "minutes": 60, "order": 1 },
+    { "id": "css-responsive-2", "courseId": "css-responsive", "title": "Media queries and responsive units", "minutes": 50, "order": 2 },
+    { "id": "js-fundamentals-1", "courseId": "js-fundamentals", "title": "Variables, types and functions", "minutes": 60, "order": 1 },
+    { "id": "js-fundamentals-2", "courseId": "js-fundamentals", "title": "Arrays, objects and loops", "minutes": 60, "order": 2 },
+    { "id": "js-dom-events-1", "courseId": "js-dom-events", "title": "Selecting and changing elements", "minutes": 50, "order": 1 },
+    { "id": "js-dom-events-2", "courseId": "js-dom-events", "title": "Events and form validation", "minutes": 60, "order": 2 }
+]
+
