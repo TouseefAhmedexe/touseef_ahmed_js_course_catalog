@@ -11,11 +11,14 @@ import {
     normalizeList,
     sortCourses
 } from "./data-utils.js";
-import { readStateFromUrl, writeStateToUrl } from "./url-state.js";
+import debounce from "./debounce.js";
+import { DEFAULT_STATE, readStateFromUrl, writeStateToUrl } from "./url-state.js";
 import {
+    bindControls,
     clearCourses,
     fillCategoryOptions,
     hideState,
+    readControls,
     renderCourses,
     renderSummary,
     showCancelled,
@@ -26,6 +29,8 @@ import {
     showResultCount,
     writeControls
 } from "./ui.js";
+
+const SEARCH_DELAY_MS = 300;
 
 let state = readStateFromUrl();
 let catalog = null;
@@ -130,6 +135,38 @@ async function loadData() {
     }
 }
 
+function applyState(newState) {
+    state = newState;
+    writeStateToUrl(state);
+
+    if (catalog !== null) {
+        updateCourses();
+    }
+}
+
+function handleFilterChange() {
+    applyState(readControls());
+}
+
+function handleClear() {
+    writeControls(DEFAULT_STATE);
+    applyState({ ...DEFAULT_STATE });
+}
+
+function handleCancel() {
+    activeController?.abort();
+}
+
+bindControls({
+    onSearch: debounce(handleFilterChange, SEARCH_DELAY_MS),
+    onChange: handleFilterChange,
+    onClear: handleClear,
+    onReload: loadData,
+    onRetry: loadData,
+    onCancel: handleCancel
+});
+
 writeControls(state);
 loadData();
+
 
