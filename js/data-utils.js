@@ -94,3 +94,72 @@ export function normalizeList(records, normalizeRecord) {
     return { valid, skippedCount: records.length - valid.length };
 }
 
+
+export function filterCourses(courses, { query, category, level }) {
+    const text = query.trim().toLowerCase();
+
+    return courses.filter((course) => {
+        const searchable = `${course.title} ${course.summary} ${course.category}`.toLowerCase();
+        const matchesText = text === "" || searchable.includes(text);
+        const matchesCategory = category === "all" || course.category === category;
+        const matchesLevel = level === "all" || course.level === level;
+
+        return matchesText && matchesCategory && matchesLevel;
+    });
+}
+
+const getTime = (course) => new Date(course.startDate).getTime();
+
+const sorters = {
+    title: (first, second) => first.title.localeCompare(second.title),
+    date: (first, second) => getTime(first) - getTime(second),
+    "duration-short": (first, second) => first.durationHours - second.durationHours,
+    "duration-long": (first, second) => second.durationHours - first.durationHours,
+    rating: (first, second) => second.rating - first.rating
+};
+
+export const SORT_KEYS = Object.keys(sorters);
+
+export function sortCourses(courses, sortKey) {
+    const compare = sorters[sortKey] ?? sorters.title;
+
+    return [...courses].sort(compare);
+}
+
+export function groupBy(items, getKey) {
+    return items.reduce((groups, item) => {
+        const key = getKey(item);
+
+        return { ...groups, [key]: [...(groups[key] ?? []), item] };
+    }, {});
+}
+
+export function getCategories(courses) {
+    const categories = courses.reduce((found, course) => {
+        return found.includes(course.category) ? found : [...found, course.category];
+    }, []);
+
+    return categories.sort((first, second) => first.localeCompare(second));
+}
+
+export function sumMinutes(lessons) {
+    return lessons.reduce((total, lesson) => total + lesson.minutes, 0);
+}
+
+export function getCatalogStats(courses, lessonsByCourse) {
+    const totalHours = courses.reduce((total, course) => total + course.durationHours, 0);
+    const totalRating = courses.reduce((total, course) => total + course.rating, 0);
+    const lessonCount = courses.reduce((total, course) => total + (lessonsByCourse[course.id]?.length ?? 0), 0);
+
+    return {
+        courseCount: courses.length,
+        lessonCount,
+        totalHours,
+        averageRating: courses.length === 0 ? 0 : Math.round((totalRating / courses.length) * 10) / 10
+    };
+}
+
+export const findInstructor = (instructors, instructorId) => {
+    return instructors.find((instructor) => instructor.id === instructorId);
+};
+
