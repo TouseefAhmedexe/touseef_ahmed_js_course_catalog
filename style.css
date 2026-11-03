@@ -96,3 +96,83 @@ main {
     outline-offset: 3px;
 }
 
+
+.filters {
+    align-items: end;
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.field {
+    display: grid;
+    gap: 0.25rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+:is(input, select) {
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-input-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    font: inherit;
+    padding: 0.55em 0.75em;
+    transition: border-color 0.2s ease-in-out;
+    width: 100%;
+}
+
+:is(input, select):hover {
+    border-color: var(--color-primary);
+}
+
+::placeholder {
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.button {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    padding: 0.6em 1.2em;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: scale(0.96);
+}
+
+.button--secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.button--secondary:hover {
+    background-color: #e8f0fe;
+    color: var(--color-primary-dark);
+}
+
+.hint {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    margin: var(--space-md) 0 0;
+}
+
