@@ -1,0 +1,102 @@
+[
+    {
+        "id": "html-basics",
+        "title": "HTML Basics and Forms",
+        "category": "HTML",
+        "level": "Beginner",
+        "durationHours": 12,
+        "startDate": "2026-11-16",
+        "rating": 4.6,
+        "instructorId": "ayesha-khan",
+        "summary": "Learn document structure, text, links, images, lists and basic form controls."
+    },
+    {
+        "id": "html-tables-forms",
+        "title": "Tables and Better Forms",
+        "category": "HTML",
+        "level": "Beginner",
+        "durationHours": 10,
+        "startDate": "2026-11-23",
+        "rating": 4.4,
+        "instructorId": "ayesha-khan",
+        "summary": "Learn tables and more form controls."
+    },
+    {
+        "id": "html-media-sections",
+        "title": "Media and Page Sections",
+        "category": "HTML",
+        "level": "Beginner",
+        "durationHours": 10,
+        "startDate": "2026-11-30",
+        "rating": 4.3,
+        "instructorId": "ayesha-khan",
+        "summary": "Learn common media and semantic page tags."
+    },
+    {
+        "id": "css-basics",
+        "title": "CSS Basics and Traditional Styling",
+        "category": "CSS",
+        "level": "Beginner",
+        "durationHours": 14,
+        "startDate": "2026-12-07",
+        "rating": 4.7,
+        "instructorId": "hamza-ali",
+        "summary": "Learn the CSS rules that form the foundation of almost every stylesheet."
+    },
+    {
+        "id": "css-box-model",
+        "title": "Box Model, Flow and Traditional Layout",
+        "category": "CSS",
+        "level": "Intermediate",
+        "durationHours": 14,
+        "startDate": "2026-12-14",
+        "rating": 4.5,
+        "instructorId": "hamza-ali",
+        "summary": "Understand how browsers calculate the size and position of elements."
+    },
+    {
+        "id": "css-responsive",
+        "title": "Modern Layout and Responsive CSS",
+        "category": "CSS",
+        "level": "Intermediate",
+        "durationHours": 16,
+        "startDate": "2026-12-21",
+        "rating": 4.8,
+        "instructorId": "hamza-ali",
+        "summary": "Move from traditional layout to Flexbox, Grid and responsive media queries."
+    },
+    {
+        "id": "js-fundamentals",
+        "title": "JavaScript Fundamentals",
+        "category": "JavaScript",
+        "level": "Intermediate",
+        "durationHours": 20,
+        "startDate": "2027-01-04",
+        "rating": 4.6,
+        "instructorId": "sara-ahmed",
+        "summary": "Learn JavaScript as a programming language before using it for browser manipulation."
+    },
+    {
+        "id": "js-dom-events",
+        "title": "DOM, Events and Forms",
+        "category": "JavaScript",
+        "level": "Intermediate",
+        "durationHours": 20,
+        "startDate": "2027-01-11",
+        "rating": 4.5,
+        "instructorId": "sara-ahmed",
+        "summary": "Learn how vanilla JavaScript controls HTML and CSS in the browser."
+    },
+    {
+        "id": "js-async",
+        "title": "Modern JavaScript and Async Programming",
+        "category": "JavaScript",
+        "level": "Advanced",
+        "durationHours": 24,
+        "startDate": "2027-01-18",
+        "rating": 4.9,
+        "instructorId": "sara-ahmed",
+        "summary": "Learn the patterns used when working with APIs and real application data."
+    }
+]
+
