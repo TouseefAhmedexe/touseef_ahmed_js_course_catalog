@@ -73,6 +73,24 @@
 
             <p class="hint">Your search, category, level and sort choices are saved in the address of the page.</p>
         </section>
+
+        <section class="section" id="results">
+            <h2>Courses</h2>
+
+            <p class="result-count" id="result-count"></p>
+
+            <div class="state-box" id="state-box" hidden>
+                <p class="state-message" id="state-message"></p>
+
+                <div class="button-row">
+                    <button class="button button--secondary" type="button" id="cancel-button" hidden>Cancel loading</button>
+                    <button class="button" type="button" id="retry-button" hidden>Try again</button>
+                    <button class="button" type="button" id="state-clear-button" hidden>Clear filters</button>
+                </div>
+            </div>
+
+            <div class="course-grid" id="course-grid"></div>
+        </section>
     </main>
 </body>
 
