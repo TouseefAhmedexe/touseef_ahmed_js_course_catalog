@@ -28,4 +28,4 @@ All course, lesson and instructor data is sample data.
 
 ## How to run
 Open the folder in Visual Studio Code and use Live Server. Modules and fetch do not work when
-index.html is opened by double-clicking it.
+index.html is opened by double-clicking it
