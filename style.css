@@ -366,3 +366,33 @@ label {
     }
 }
 
+
+.message {
+    background-color: #e8f0fe;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 6px;
+    margin: var(--space-md);
+    padding: 0.75rem 1rem;
+}
+
+.site-footer {
+    background-color: var(--color-primary-dark);
+    color: white;
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none;
+        transition: none;
+    }
+}
+
